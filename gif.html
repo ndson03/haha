@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receive Gift</title>
+    <style>
+        /* CSS styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(255, 226, 231);
+        }
+        .container {
+            text-align: center;
+            margin-top: 50px;
+            align-items: center;
+        }
+        .gift-image {
+            display: none; /* Ẩn ảnh ban đầu */
+            max-width: 100%; /* Đảm bảo ảnh không vượt quá kích thước của vùng chứa */
+            transition: opacity 0.5s ease; /* Hiệu ứng khi hiển thị ảnh */
+        }
+        .gift-button {
+            padding: 10px 20px;
+            margin-top: 200px;
+            font-size: 40px;
+            background-color: palevioletred;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 40px;
+            transition: background-color 0.3s ease; /* Hiệu ứng khi hover vào nút */
+        }
+        .gift-button:hover {
+            background-color: #e6b8d3;
+        }
+        img{
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="gift-button" onclick="playSoundAndShowGift()" id="gb">Nhận quà</button>
+        <img class="gift-image" id="giftImage" src="pic.jpg" alt="Gift Image">
+    </div>
+    
+    <audio id="giftSound" loop>
+        <source src="music.mp3" type="audio/mpeg" >
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+       function playSoundAndShowGift() {
+            var giftSound = document.getElementById('giftSound');
+            var giftImage = document.getElementById('giftImage');
+            var gb = document.getElementById('gb');
+            
+            // Phát âm thanh
+            giftSound.play();
+            
+            // Hiển thị ảnh khi nhấn nút
+            giftImage.style.display = 'block';
+            gb.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

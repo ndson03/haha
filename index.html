@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    img{
+      display: none;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+</head>
+<body>
+  <img src="https://scontent.fsgn2-5.fna.fbcdn.net/v/t39.30808-1/370278791_1030355881467005_4322886798385961510_n.jpg?stp=dst-jpg_p320x320&_nc_cat=106&ccb=1-7&_nc_sid=fe8171&_nc_ohc=vvrZB93kwFEAX8HolW5&_nc_oc=AQlzQk6kYqgzPIkQ-gO-xrCtKcUKk6swQlOSO_uFgytP_z_-Y01mBirH2fpAT-MT81E&_nc_ht=scontent.fsgn2-5.fna&oh=00_AfAtR6FtObYBKioDrj2OZ6Xm8Ykc1jVCV4kz_--bcGB3HA&oe=650D778C">
+  <!-- partial:index.partial.html -->
+  <canvas id="c"></canvas>
+  <button class="gift-button" onclick="showGift()">Nhận quà</button>
+  <img class="gift-image" id="giftImage" src="path_to_default_image.jpg" alt="Gift Image">
+  <!-- partial -->
+  <script>
+    // Sử dụng sự kiện window.onload để chờ cho trang tải xong
+    window.onload = function() {
+      setTimeout(function() {
+        // Chuyển hướng sang trang khác sau 10 giây
+        window.location.href = '/gif.html';
+      }, 10000); // Chờ 10 giây trước khi chuyển hướng
+    };
+  </script>
+
+  <script src="./script.js"></script>
+</body>
+</html>
